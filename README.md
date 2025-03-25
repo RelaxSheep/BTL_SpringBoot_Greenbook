@@ -1,4 +1,4 @@
-# BTL_WebJava_Nhom13
+# BTL_SpringBoot_Greenbook
 
 Require install this in local terminal to use:
 - Install newest JDK
