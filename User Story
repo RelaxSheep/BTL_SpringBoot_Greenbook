@@ -1,0 +1,8 @@
+Là 1 người dùng tôi muốn:
+- đăng nhập,xuất - authentication - bảo mật
+- quản lý tài khoản -> admin - quản lý, user - thủ thư, - crud
+- quản lý sách - stock -- tích hợp tìm kiếm sách
+- quản lý đơn vận
+- quản lý blog
+- quản lý khuyến mại - có thời hạn
+- phân quyền
