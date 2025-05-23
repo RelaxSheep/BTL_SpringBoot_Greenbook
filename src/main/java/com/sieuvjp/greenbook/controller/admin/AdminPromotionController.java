@@ -40,7 +40,7 @@ public class AdminPromotionController {
         model.addAttribute("activePromotions", activePromotions);
         model.addAttribute("upcomingPromotions", upcomingPromotions);
         model.addAttribute("expiredPromotions", expiredPromotions);
-        return "admin/promotions/list";
+        return "pages/promotion/index";
     }
 
     @GetMapping("/create")
