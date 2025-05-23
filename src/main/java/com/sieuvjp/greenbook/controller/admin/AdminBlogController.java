@@ -63,7 +63,7 @@ public class AdminBlogController {
         model.addAttribute("totalItems", blogPage.getTotalElements());
         model.addAttribute("blogStatuses", BlogStatus.values());
 
-        return "admin/blogs/list";
+        return "pages/blog/index";
     }
 
     @GetMapping("/create")
