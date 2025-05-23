@@ -1,3 +1,5 @@
+USE greenbook;
+
 -- Clear existing data
 SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE users;
@@ -13,7 +15,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 INSERT INTO users (username, password, email, full_name, phone, address, role, is_active, created_at, updated_at)
 VALUES
 -- Admin password: admin123 (BCrypt encoded)
-('admin', '$2a$10$rjf7sXQyN1HVAqO0k2A9xuS6oUSd8.DmIAJvQr9PJvwKdKdqMr4TC', 'admin@greenbook.com', 'System Admin', '0987654321', 'Hà Nội', 'ADMIN', 1, NOW(), NOW()),
+--('admin', '$2a$10$rjf7sXQyN1HVAqO0k2A9xuS6oUSd8.DmIAJvQr9PJvwKdKdqMr4TC', 'admin@greenbook.com', 'System Admin', '0987654321', 'Hà Nội', 'ADMIN', 1, NOW(), NOW()),
 -- Librarian password: lib123
 ('librarian', '$2a$10$tYWrm7KFj0Oaff0aLKsChOcK08GJqwXgV2W87qJ8VbXGejX5YZG4i', 'librarian@greenbook.com', 'Book Manager', '0912345678', 'Hồ Chí Minh', 'LIBRARIAN', 1, NOW(), NOW()),
 -- Customer password: user123

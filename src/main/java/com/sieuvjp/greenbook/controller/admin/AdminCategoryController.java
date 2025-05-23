@@ -28,13 +28,13 @@ public class AdminCategoryController {
                 .collect(Collectors.toList());
 
         model.addAttribute("categories", categories);
-        return "admin/categories/list";
+        return "pages/category/index";
     }
 
     @GetMapping("/create")
     public String showCreateForm(Model model) {
         model.addAttribute("category", new CategoryDTO());
-        return "admin/categories/form";
+        return "pages/category/form";
     }
 
     @PostMapping("/create")
@@ -44,13 +44,13 @@ public class AdminCategoryController {
 
         // Check for validation errors
         if (result.hasErrors()) {
-            return "admin/categories/form";
+            return "pages/category/form";
         }
 
         // Check if category name already exists
         if (categoryService.existsByName(categoryDTO.getName())) {
             result.rejectValue("name", "error.category", "Category name already exists");
-            return "admin/categories/form";
+            return "pages/category/form";
         }
 
         // Set as active by default
@@ -70,7 +70,7 @@ public class AdminCategoryController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid category ID: " + id));
 
         model.addAttribute("category", CategoryDTO.fromEntity(category));
-        return "admin/categories/form";
+        return "pages/category/form";
     }
 
     @PostMapping("/edit/{id}")
@@ -81,7 +81,7 @@ public class AdminCategoryController {
 
         // Check for validation errors
         if (result.hasErrors()) {
-            return "admin/categories/form";
+            return "pages/category/form";
         }
 
         // Get existing category
@@ -92,7 +92,7 @@ public class AdminCategoryController {
         if (!existingCategory.getName().equals(categoryDTO.getName()) &&
                 categoryService.existsByName(categoryDTO.getName())) {
             result.rejectValue("name", "error.category", "Category name already exists");
-            return "admin/categories/form";
+            return "pages/category/form";
         }
 
         // Save category
