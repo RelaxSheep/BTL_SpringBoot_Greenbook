@@ -70,7 +70,7 @@ public class AdminBookController {
     public String showCreateForm(Model model) {
         model.addAttribute("book", new BookDTO());
         model.addAttribute("categories", categoryService.findAllActive());
-        return "admin/books/form";
+        return "pages/book/form";
     }
 
     @PostMapping("/create")
@@ -83,7 +83,7 @@ public class AdminBookController {
 
         // Check for validation errors
         if (result.hasErrors()) {
-            return "admin/books/form";
+            return "pages/book/form";
         }
 
         // Get category
@@ -109,7 +109,7 @@ public class AdminBookController {
 
         model.addAttribute("book", BookDTO.fromEntity(book));
         model.addAttribute("categories", categoryService.findAllActive());
-        return "admin/books/form";
+        return "pages/book/form";
     }
 
     @PostMapping("/edit/{id}")
@@ -123,7 +123,7 @@ public class AdminBookController {
 
         // Check for validation errors
         if (result.hasErrors()) {
-            return "admin/books/form";
+            return "pages/book/form";
         }
 
         // Get existing book
@@ -172,7 +172,7 @@ public class AdminBookController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
 
         model.addAttribute("book", BookDTO.fromEntity(book));
-        return "admin/books/images";
+        return "pages/book/images";
     }
 
     @PostMapping("/images/{id}/upload")
@@ -206,7 +206,7 @@ public class AdminBookController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid book ID: " + id));
 
         model.addAttribute("book", BookDTO.fromEntity(book));
-        return "admin/books/update-stock";
+        return "pages/book/update-stock";
     }
 
     @PostMapping("/update-stock/{id}")

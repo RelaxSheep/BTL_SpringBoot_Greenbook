@@ -81,7 +81,7 @@ public class AdminBlogController {
 
         model.addAttribute("blog", blog);
         model.addAttribute("blogStatuses", BlogStatus.values());
-        return "pages/blog/form";
+        return "admin/blogs/form";
     }
 
     @PostMapping("/create")
