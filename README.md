@@ -26,7 +26,7 @@ GreenBook là một ứng dụng web quản lý bán sách trực tuyến đư�
 
 ## Yêu cầu hệ thống
 
-- JDK 17
+- JDK 24
 - Maven 3.6.3+
 - MySQL 8.0+
 
