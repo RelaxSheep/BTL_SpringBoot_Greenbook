@@ -64,7 +64,7 @@ public class AdminOrderController {
         model.addAttribute("totalItems", orderPage.getTotalElements());
         model.addAttribute("orderStatuses", OrderStatus.values());
 
-        return "admin/orders/list";
+        return "pages/order/index";
     }
 
     @GetMapping("/{id}")
@@ -103,6 +103,6 @@ public class AdminOrderController {
         model.addAttribute("orders", orders);
         model.addAttribute("status", status);
         model.addAttribute("orderStatuses", OrderStatus.values());
-        return "admin/orders/list";
+        return "pages/order/index";
     }
 }
