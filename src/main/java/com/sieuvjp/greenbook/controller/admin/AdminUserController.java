@@ -29,7 +29,7 @@ public class AdminUserController {
                 .collect(Collectors.toList());
 
         model.addAttribute("users", users);
-        return "admin/users/list";
+        return "pages/user/index";
     }
 
     @GetMapping("/create")
