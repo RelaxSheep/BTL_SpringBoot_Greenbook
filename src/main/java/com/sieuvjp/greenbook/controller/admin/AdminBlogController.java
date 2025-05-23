@@ -94,7 +94,7 @@ public class AdminBlogController {
 
         // Check for validation errors
         if (result.hasErrors()) {
-            return "admin/blogs/form";
+            return "pages/blog/form";
         }
 
         // Get user
@@ -119,7 +119,7 @@ public class AdminBlogController {
 
         model.addAttribute("blog", BlogDTO.fromEntity(blog));
         model.addAttribute("blogStatuses", BlogStatus.values());
-        return "admin/blogs/form";
+        return "pages/blog/form";
     }
 
     @PostMapping("/edit/{id}")
@@ -133,7 +133,7 @@ public class AdminBlogController {
 
         // Check for validation errors
         if (result.hasErrors()) {
-            return "admin/blogs/form";
+            return "pages/blog/form";
         }
 
         // Get existing blog
@@ -184,7 +184,7 @@ public class AdminBlogController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid blog ID: " + id));
 
         model.addAttribute("blog", BlogDTO.fromEntity(blog));
-        return "admin/blogs/upload-image";
+        return "pages/blog/upload-image";
     }
 
     @PostMapping("/upload-image/{id}")
