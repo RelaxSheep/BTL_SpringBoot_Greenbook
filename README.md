@@ -19,7 +19,7 @@ GreenBook là một ứng dụng web quản lý bán sách trực tuyến đư�
 
 ## Công nghệ sử dụng
 
-- **Backend**: Java 17, Spring Boot 3.2.3, Spring Security, Spring Data JPA
+- **Backend**: Java 24, Spring Boot 3.2.3, Spring Security, Spring Data JPA
 - **Frontend**: Thymeleaf, Bootstrap 5, jQuery, Font Awesome
 - **Database**: MySQL 8
 - **Build Tool**: Maven
