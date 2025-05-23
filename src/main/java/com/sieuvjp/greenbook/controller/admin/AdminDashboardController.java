@@ -58,6 +58,6 @@ public class AdminDashboardController {
         model.addAttribute("topSellingBooks", topSellingBooks);
         model.addAttribute("monthlySales", monthlySales);
 
-        return "admin/dashboard/index";
+        return "pages/home/index";
     }
 }
