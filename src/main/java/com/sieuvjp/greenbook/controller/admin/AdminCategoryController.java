@@ -28,7 +28,7 @@ public class AdminCategoryController {
                 .collect(Collectors.toList());
 
         model.addAttribute("categories", categories);
-        return "admin/categories/list";
+        return "pages/category/index";
     }
 
     @GetMapping("/create")
